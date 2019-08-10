@@ -30,13 +30,13 @@ setwd("C:/Users/hag5kor/Desktop/Shanu/ATI/")
 3^6
 
 
-#to check whether value is of logical datatype 
+#to check whether value is of logical datatype
 is.logical(3^6)
 
 is.logical(TRUE)
 is.logical(F)
 
-#to check whether value is of numeric datatype 
+#to check whether value is of numeric datatype
 is.numeric(3^6)
 
 is.integer(1)
@@ -52,7 +52,7 @@ is.integer(integer_value)
 
 is.numeric("6")
 
-#To check the data type is. / to convert  as. 
+#To check the data type is. / to convert  as.
 is.character("4")
 
 #create variable called num1 and check the datatype
@@ -101,7 +101,7 @@ mark_vector<- c(35, 45, 50, 17, 40)
 print(mark_vector)
 
 #to check the class
-class(mark_vector) 
+class(mark_vector)
 #to know the length of vector
 length(mark_vector)
 
@@ -369,11 +369,11 @@ marks==65 | marks==70
 marks[marks==65 | marks==70]
 
 #filtering/ Subsetting in vector based on condition
-#We can filter using Index (!!starts from 1) 
+#We can filter using Index (!!starts from 1)
 #or using logical sequence, should be of length of vector
 #student marks
 marks<- c(80, 30, 45, 65, 56,70,30)
-#We can filter using Index (!!starts from 1) 
+#We can filter using Index (!!starts from 1)
 marks[c(1,3,5)]
 #or using logical sequence, should be of length of vector
 marks[c(TRUE,FALSE,TRUE, FALSE, TRUE,FALSE, FALSE)]
@@ -407,7 +407,7 @@ marks<- c(30, 50, 60, 20, 80)
 print(marks)
 marks[marks>30 & marks<60]
 
-#filter fruits using %in% easy when multiple value need to 
+#filter fruits using %in% easy when multiple value need to
 #be filtered
 fruits[fruits %in% c("Apple","Banana")]
 
@@ -442,16 +442,13 @@ print(num_seq1)
 #gives remainder, if divisible by 2 then 0 otherwise 1
 num_seq %%2
 
-#to check number is even or not , remainder should be 0 
+#to check number is even or not , remainder should be 0
 num_seq %%2==0
 
 num_seq[num_seq %%2 ==0]
 
 num_seq[num_seq %%2 ==0]<-3
 print(num_seq)
-
-
-
 
 
 num_vec<- 11:20
@@ -466,9 +463,6 @@ num_vec[num_vec %%2==0]
 
 num_vec[num_vec %%2==0]<- 3
 print(num_vec)
-
-
-
 
 #create sequence from 11 to 20, replace odd numbers by 2
 
@@ -548,9 +542,9 @@ print(vec1)
 print(vec3)
 vec1+vec3-vec2
 
-#BE careful with recycling 
-#When applying an operation to two vectors that requires them to be the same length, 
-#R automatically recycles, or repeats, the shorter one, 
+#BE careful with recycling
+#When applying an operation to two vectors that requires them to be the same length,
+#R automatically recycles, or repeats, the shorter one,
 #until it is long enough to match the longer one.
 
 c(1,2,4) + c(6,0,9,20,22, 45, 56)
@@ -591,7 +585,7 @@ diff(num_seq)
 #diff function can also be used to convert cumulative series to actual series
 
 ############################################################################
-#create factor data 
+#create factor data
 gender_cat<- factor(c("F","M","M","F"))
 print(gender_cat)
 
@@ -603,7 +597,7 @@ gender_cat[gender_cat=="F"]<- "D"
 levels(gender_cat)
 
 #to define categories
-#create factor data 
+#create factor data
 gender_cat<- factor(c("F","M","M","F"), levels= c("F","M","f","m",
                                                   "male","Female"))
 print(gender_cat)
@@ -631,13 +625,13 @@ siz_cat
 #Dataframe
 #A collection of vector of same length
 #Two Dimensional, arranged in rows and columns
-#columns can contain different data types 
+#columns can contain different data types
 #For instance, one column may consist
 #of numbers, and another column might have character
 #strings.
 #But within column it should be of same data type
 
-#To create Data Frame 
+#To create Data Frame
 name<- c("Jack","Jill", "Riya")
 age<- c(6, 11, 9)
 kids<- data.frame(name, age, stringsAsFactors = FALSE)
@@ -647,8 +641,6 @@ str(kids)
 name<- c("Jack","Jill", "Riya","Riya")
 age<- c(6, 11)
 data.frame(name, age, stringsAsFactors = FALSE)
-
-
 
 
 #by default in R all the string/character will be read as factor
@@ -963,7 +955,7 @@ nrow(employee_data[employee_data$GENDER=="Male",])
 
 #Accessing data frame
 #Extract the columns using index
-#Extract the columns using column name  
+#Extract the columns using column name
 
 
 #using dollar

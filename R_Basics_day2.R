@@ -8,7 +8,7 @@ c(vec1, 3)
 #Read/write file
 #reading employee data
 library(rio)
-setwd("C:/Users/hag5kor/Desktop/Shanu/ATI/")
+setwd("D:\\work\\Learnings\\ATI\\R_Basics\\")
 getwd()
 file_path="EMplData.csv"
 employee_data<- import(file_path)
@@ -273,14 +273,6 @@ left_join(df2, df1)
 right_join(df1, df2)
 
 
-left_join(df1, df2)
-left_join(df2, df1)
-
-right_join(df2, df1)
-
-
-full_join(df1, df2, by=c())
-
 #inner_join: comman rows in both the dataset
 #full_join: all rows in both the dataset
 inner_join(df1, df2)
@@ -340,10 +332,6 @@ summary(complete_data)
 is.na(kids$weight)
 
 kids[is.na(kids$weight),]
-
-
-kids[!is.na(kids$weight), ]
-
 
 
 #just remove the row for which age column value is missing
@@ -618,6 +606,11 @@ ggplot(num_df, aes(x=num1, y=num2))+geom_point()
 
 #Line Plot
 ggplot(num_df, aes(x=num1, y=num2))+geom_line()
+
+#install.packages("esquisse", repos ='http://cran.us.r-project.org')
+library(esquisse)
+esquisse::esquisser()
+#https://cran.r-project.org/web/packages/esquisse/readme/README.html
 
 
 #################################################################
